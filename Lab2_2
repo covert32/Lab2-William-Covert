@@ -1,0 +1,32 @@
+#include <msp430.h> 
+
+ 
+
+/**
+ * main.c
+ */
+
+
+//declare the sum function here
+int sum(float s1, float s2)
+{
+    int s = s1 + s2;
+    return s;
+}
+  
+int main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;    // stop watchdog timer
+    int d;
+      
+    int a = 0b00000000010011111; //binary arithmetic
+    int b = 0b00000000000111111; //binary arithmetic
+
+    //declare another variable d
+
+   d = sum(a,b);
+
+
+   while(1);
+    return 0;
+}
