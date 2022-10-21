@@ -1,0 +1,23 @@
+#include <msp430.h> 
+
+float global =10.0;
+
+/**
+ * main.c
+ */
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	unsigned char c=0x0a;
+	unsigned char f=0x0f;
+	unsigned char and= c&&f; //
+	unsigned char or= c||f;
+	int a=5;
+	a+=3; //increments a by 3
+	global-=4.0; //decrements global float by 4
+
+
+
+	
+	return 0;
+}
